@@ -8,8 +8,30 @@ python:
   - 3.6
 
 
+matrix:
+  include:
+    - python: 2.7
+      env: TOXENV=py27-d110
+    - python: 2.7
+      env: TOXENV=py27-d111
+    - python: 3.4
+      env: TOXENV=py34-d110
+    - python: 3.4
+      env: TOXENV=py34-d111
+    - python: 3.4
+      env: TOXENV=py34-d20
+    - python: 3.5
+      env: TOXENV=py35-d110
+    - python: 3.5
+      env: TOXENV=py35-d111
+    - python: 3.5
+      env: TOXENV=py35-d20
+    - python: 3.6
+      env: TOXENV=py36-d20
+
+
 install:
-  - pip install tox-travis flake8
+  - pip install tox flake8
 
 
 before_script:
@@ -17,4 +39,4 @@ before_script:
 
 
 script:
-  - tox
+  - tox -e ${TOXENV}

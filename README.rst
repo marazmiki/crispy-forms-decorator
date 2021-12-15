@@ -15,8 +15,8 @@ Look at the approach that recommended by official documentation:
 
 .. code:: python
 
-    from crispy_forms.helper import FormHelper
     from crispy_forms.layout import Submit
+    from crispy_forms.helper import FormHelper
 
     class ExampleForm(forms.Form):
         [...]
@@ -34,16 +34,17 @@ And how we can shrink the code by using a simple decorator:
 
 .. code:: python
 
+    from crispy_forms_decorator import crispy   # Look at me!
     from crispy_forms.layout import Submit
-    from crispy_forms_decorator import crispy
 
-    @crispy(form_id='id-exampleForm',
-            form_class ='blueForms',
-            form_method='post',
-            form_action='submit_survey',
-            extra_inputs=[
-                Submit('submit', 'Submit')
-            ])
+    @crispy(
+        form_id='id-exampleForm',
+        form_class ='blueForms',
+        form_method='post',
+        form_action='submit_survey',
+        extra_inputs=[
+            Submit('submit', 'Submit')
+        ])
     class ExampleForm(forms.Form):
         # [...]
 
@@ -147,6 +148,7 @@ Fieldsets
 If you should use fieldsets, also no need override the class constructor.
 
 .. code:: python
+
     from crispy_forms.layout import Fieldset
 
     @crispy

@@ -1,6 +1,5 @@
-from crispy_forms.layout import Layout, Fieldset, Field
 from crispy_forms.helper import FormHelper
-
+from crispy_forms.layout import Field, Fieldset, Layout
 
 __all__ = ['CrispyFormMixin', 'crispy']
 __version__ = '0.1.0'

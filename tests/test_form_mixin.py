@@ -1,7 +1,8 @@
 import pytest
-from django.template import Template, Context
 from crispy_forms.helper import FormHelper
-from crispy_forms.layout import Fieldset, Field, Layout, HTML
+from crispy_forms.layout import HTML, Field, Fieldset, Layout
+from django.template import Context, Template
+
 from crispy_forms_decorator import CrispyFormMixin
 
 

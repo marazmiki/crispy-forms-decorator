@@ -1,7 +1,8 @@
 import pytest
-from crispy_forms.layout import Button, HTML
 from crispy_forms.helper import FormHelper
-from crispy_forms_decorator import crispy, CrispyFormMixin
+from crispy_forms.layout import HTML, Button
+
+from crispy_forms_decorator import CrispyFormMixin, crispy
 
 
 @pytest.mark.parametrize(

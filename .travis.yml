@@ -14,5 +14,5 @@ before_script:
   - flake8
 
 script:
-  - tox
+  - tox --skip-missing-interpreters
 
